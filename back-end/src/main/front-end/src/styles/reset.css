@@ -1,0 +1,171 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+/* html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+/*
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+*/
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Color candidate */
+/* Color Theme Swatches in Hex */
+.PLNT-System-1-hex {
+  color: #636af2;
+}
+.PLNT-System-2-hex {
+  color: #2f3273;
+}
+.PLNT-System-3-hex {
+  color: #777df2;
+}
+.PLNT-System-4-hex {
+  color: #e9e9f2;
+}
+.PLNT-System-5-hex {
+  color: #0d0d0d;
+}
+
+/* Color Theme Swatches in Hex */
+.진한-보라-1-hex {
+  color: #c714a8;
+}
+.진한-보라-2-hex {
+  color: #9413cf;
+}
+.진한-보라-3-hex {
+  color: #4719b8;
+}
+.진한-보라-4-hex {
+  color: #1329cf;
+}
+.진한-보라-5-hex {
+  color: #126dc4;
+}
