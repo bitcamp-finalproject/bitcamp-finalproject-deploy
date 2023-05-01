@@ -19,7 +19,7 @@ function Report(props) {
 
   useEffect(() => {
     axios
-      .get(`../report`)
+      .get(`http://223.130.138.44/report`)
       .then((response) => setReportMenu(response.data))
       .catch((error) => console.log(error));
   }, []);
@@ -29,7 +29,7 @@ function Report(props) {
 
     axios
       .post(
-        "../report",
+        "http://223.130.138.44/report",
         {},
         {
           params: {

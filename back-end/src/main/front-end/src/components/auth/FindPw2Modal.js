@@ -58,7 +58,7 @@ function FindPw2Modal(props) {
     }
 
     axios
-      .get("../auth/authcode", {
+      .get("http://223.130.138.44/auth/authcode", {
         params: {
           email: email,
           authCode: authCode,
@@ -104,7 +104,7 @@ function FindPw2Modal(props) {
 
     axios
       .put(
-        "../auth/findpw",
+        "http://223.130.138.44/auth/findpw",
         {},
         {
           params: {

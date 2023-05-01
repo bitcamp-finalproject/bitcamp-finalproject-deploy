@@ -8,7 +8,7 @@ function PersonalAlarms() {
   const navigate = useNavigate();
   const [alarms, setAlarms] = useState([]);
   useEffect(() => {
-    axios.get("../alarm").then((response) => {
+    axios.get("http://223.130.138.44/alarm").then((response) => {
       if (response.data.status === "failure") {
         navigate("/");
       }

@@ -9,7 +9,7 @@ function LikeIcon(props) {
   const size = props.size;
   useEffect(() => {
     axios
-      .get("../like/" + props.contentNo, {
+      .get("http://223.130.138.44/like/" + props.contentNo, {
         params: {
           type: props.contentType,
         },
@@ -30,14 +30,14 @@ function LikeIcon(props) {
     setlikeState(!likeState);
 
     if (likeState) {
-      axios.delete("../like/" + props.contentNo, {
+      axios.delete("http://223.130.138.44/like/" + props.contentNo, {
         params: {
           type: props.contentType,
         },
       });
     } else {
       axios.post(
-        "../like",
+        "http://223.130.138.44/like",
         {
           likerNo: 0,
           contentNo: props.contentNo,

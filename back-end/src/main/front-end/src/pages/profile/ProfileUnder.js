@@ -7,7 +7,7 @@ function ProfileUnder(props) {
 
   useEffect(() => {
     axios
-      .get(`../boards/auth`)
+      .get(`http://223.130.138.44/boards/auth`)
       .then((response) => setAuth(response.data))
       .catch((error) => console.log(error));
   }, []);

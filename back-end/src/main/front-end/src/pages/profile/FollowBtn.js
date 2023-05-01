@@ -6,31 +6,35 @@ function FollowBtn(props) {
   const [isShow, setIsShow] = useState(false);
 
   useEffect(() => {
-    axios.get("../follow/check/" + props.followerNo).then((response) => {
-      if (response.data.data === "follow") {
-        setfollowState(true);
-      } else {
-        setfollowState(false);
-      }
-      if (response.data.data === "own") {
-        setIsShow(false);
-      } else {
-        setIsShow(true);
-      }
-    });
+    axios
+      .get("http://223.130.138.44/follow/check/" + props.followerNo)
+      .then((response) => {
+        if (response.data.data === "follow") {
+          setfollowState(true);
+        } else {
+          setfollowState(false);
+        }
+        if (response.data.data === "own") {
+          setIsShow(false);
+        } else {
+          setIsShow(true);
+        }
+      });
   }, [props.followerNo]);
 
   const handleFollow = () => {
     setfollowState(!followState);
     if (followState) {
-      axios.delete("../follow/" + props.followerNo).then((response) => {
-        if (response.status === 200 && props.updateCount !== undefined) {
-          props.updateCount(-1);
-        }
-      });
+      axios
+        .delete("http://223.130.138.44/follow/" + props.followerNo)
+        .then((response) => {
+          if (response.status === 200 && props.updateCount !== undefined) {
+            props.updateCount(-1);
+          }
+        });
     } else {
       axios
-        .post("../follow", {
+        .post("http://223.130.138.44/follow", {
           followingNo: props.followingNo,
           followerNo: props.followerNo,
         })

@@ -78,7 +78,7 @@ function AuthModal(props) {
   const handleClickProfile = () => {
     handleClose();
 
-    axios.get("../auth/user").then((response) => {
+    axios.get("http://223.130.138.44:80/auth/user").then((response) => {
       navigate("/Profile", {
         state: { no: response.data.data.no },
       });
@@ -103,10 +103,10 @@ function AuthModal(props) {
     handleMouseLeaveLogout();
 
     axios
-      .get("../auth/logout")
+      .get("http://223.130.138.44:80/auth/logout")
       .then((response) => {
         setCurrentUser(null);
-        window.location.href = "http://localhost:3000";
+        window.location.href = "http://223.130.138.44";
       })
       .catch((error) => {
         // alert("로그아웃 중 오류 발생!");

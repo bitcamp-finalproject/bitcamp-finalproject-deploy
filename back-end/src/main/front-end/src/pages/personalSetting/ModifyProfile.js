@@ -48,7 +48,7 @@ function ModifyProfile(props) {
   };
 
   useEffect(() => {
-    axios.get("../auth/user").then((response) => {
+    axios.get("http://223.130.138.44/auth/user").then((response) => {
       if (response.data.status === "failure") {
         navigate("/");
       }
@@ -86,11 +86,15 @@ function ModifyProfile(props) {
         "base64"
       );
       try {
-        await axios.put("../member/upload/profileImg", formData, {
-          headers: {
-            "Content-Type": "multipart/form-data;",
-          },
-        });
+        await axios.put(
+          "http://223.130.138.44/member/upload/profileImg",
+          formData,
+          {
+            headers: {
+              "Content-Type": "multipart/form-data;",
+            },
+          }
+        );
       } catch (error) {
         console.error(error);
       }

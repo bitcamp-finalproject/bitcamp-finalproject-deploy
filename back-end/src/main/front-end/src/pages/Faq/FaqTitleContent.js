@@ -9,7 +9,9 @@ function FaqTitleContent({ selectedType, title }) {
   useEffect(() => {
     if (selectedType) {
       axios
-        .get(`../faqTitleContent?faq_type_no=${selectedType}`)
+        .get(
+          `http://223.130.138.44/faqTitleContent?faq_type_no=${selectedType}`
+        )
         .then((response) => {
           // console.log(response.data);
           setDbData(response.data);

@@ -7,7 +7,7 @@ function BoardDelete(props) {
 
   function deleteBoard(boardNo) {
     axios
-      .delete(`../boards/${boardNo}`, {
+      .delete(`http://223.130.138.44/boards/${boardNo}`, {
         data: replyNos,
       })
       .then((response) => {

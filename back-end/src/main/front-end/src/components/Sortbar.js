@@ -10,7 +10,7 @@ function Sortbar() {
   if (currentPath !== "random") {
     axios
       .post(
-        "../boards/sort",
+        "http://223.130.138.44/boards/sort",
         {},
         {
           params: {
@@ -30,7 +30,7 @@ function Sortbar() {
   const Click = (param) => {
     axios
       .post(
-        "../boards/sort",
+        "http://223.130.138.44/boards/sort",
         {},
         {
           params: {
@@ -55,7 +55,7 @@ function Sortbar() {
 
   useEffect(() => {
     axios
-      .get(`../boards/auth`)
+      .get(`http://223.130.138.44/boards/auth`)
       .then((response) => setAuth(response.data))
       .catch((error) => console.log(error));
   }, []);

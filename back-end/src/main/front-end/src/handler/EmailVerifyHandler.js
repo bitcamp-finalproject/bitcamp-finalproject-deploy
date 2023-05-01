@@ -8,7 +8,7 @@ function Verify() {
   const [message, setMessage] = useState(null);
 
   useEffect(() => {
-    axios("../auth/verify", {
+    axios("http://223.130.138.44/auth/verify", {
       params: {
         token: token,
       },

@@ -28,7 +28,7 @@ function MemberList(props) {
 
   useEffect(() => {
     axios
-      .get("../admin")
+      .get("http://223.130.138.44/admin")
       .then((response) => {
         console.log("data : ");
         console.log(response.data);

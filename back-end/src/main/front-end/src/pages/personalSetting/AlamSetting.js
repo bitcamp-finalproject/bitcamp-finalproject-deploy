@@ -6,7 +6,7 @@ import { BellFill, BellSlashFill } from "react-bootstrap-icons";
 function AlamSetting(props) {
   const [data, setData] = useState([]);
   useEffect(() => {
-    axios.get("../alarmSetting").then((response) => {
+    axios.get("http://223.130.138.44/alarmSetting").then((response) => {
       setData(response.data);
     });
   }, []);

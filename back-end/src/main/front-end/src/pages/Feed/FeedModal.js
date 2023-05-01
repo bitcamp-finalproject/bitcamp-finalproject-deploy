@@ -32,7 +32,7 @@ function FeedModal(props) {
     console.log(keyword);
     axios
       .post(
-        "../boards/keyword",
+        "http://223.130.138.44/boards/keyword",
         {},
         {
           params: {
@@ -87,7 +87,7 @@ function FeedModal(props) {
     event.preventDefault();
     axios
       .post(
-        "../reply",
+        "http://223.130.138.44/reply",
         {},
         {
           params: {
@@ -119,18 +119,18 @@ function FeedModal(props) {
 
   useEffect(() => {
     axios
-      .get(`../reply/${boardNo}`)
+      .get(`http://223.130.138.44/reply/${boardNo}`)
       .then((response) => setReply(response.data))
       .catch((error) => console.log(error));
   }, [isUpdated]);
 
-  axios.get("../point/board/" + boardNo).then((response) => {
+  axios.get("http://223.130.138.44/point/board/" + boardNo).then((response) => {
     setPoint(response.data);
   });
 
   useEffect(() => {
     axios
-      .get(`../boards/tag/${boardNo}`)
+      .get(`http://223.130.138.44/boards/tag/${boardNo}`)
       .then((response) => setTag(response.data))
       .catch((error) => console.log(error));
   }, []);

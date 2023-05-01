@@ -4,7 +4,7 @@ import "./style.css";
 const NaverLogin = (props) => {
   const { naver } = window;
   const NAVER_CLIENT_ID = "2BhRFFWkWve7muRmTFd8"; // 발급 받은 Client ID 입력
-  const NAVER_CALLBACK_URL = "http://localhost:3000/auth/naverlogin"; // 작성했던 Callback URL 입력
+  const NAVER_CALLBACK_URL = "http://223.130.138.44/auth/naverlogin"; // 작성했던 Callback URL 입력
   const naverRef = useRef();
 
   // 네이버 로그인 기능 및 버튼 구현

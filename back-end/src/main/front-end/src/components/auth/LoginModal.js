@@ -50,7 +50,7 @@ function LoginModal(props) {
 
     axios
       .post(
-        "../auth/login",
+        "http://223.130.138.44/auth/login",
         {},
         {
           params: {

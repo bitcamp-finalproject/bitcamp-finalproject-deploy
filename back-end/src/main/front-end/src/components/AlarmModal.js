@@ -27,7 +27,7 @@ function AlarmModal(props) {
   const handleClickReadAll = (e) => {
     e.preventDefault();
     // ReadAll 처리하기
-    axios.put(`../alarm/readAll`).then((response) => {
+    axios.put(`http://223.130.138.44/alarm/readAll`).then((response) => {
       if (response.data.status === "failure") {
         navigate("/");
       } else {

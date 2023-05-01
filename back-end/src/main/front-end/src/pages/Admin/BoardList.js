@@ -29,7 +29,7 @@ function BoardList(props) {
 
   useEffect(() => {
     axios
-      .get("../admin/board")
+      .get("http://223.130.138.44/admin/board")
       .then((response) => {
         setData(response.data.data);
       })
@@ -46,7 +46,7 @@ function BoardList(props) {
 
   useEffect(() => {
     axios
-      .get("../admin/reply")
+      .get("http://223.130.138.44/admin/reply")
       .then((response) => {
         setReply(response.data);
       })
