@@ -9,9 +9,7 @@ function FaqTitleContent({ selectedType, title }) {
   useEffect(() => {
     if (selectedType) {
       axios
-        .get(
-          `http://localhost:8080/faqTitleContent?faq_type_no=${selectedType}`
-        )
+        .get(`../faqTitleContent?faq_type_no=${selectedType}`)
         .then((response) => {
           // console.log(response.data);
           setDbData(response.data);

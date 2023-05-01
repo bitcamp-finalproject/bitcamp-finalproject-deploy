@@ -34,7 +34,7 @@ function CommentList(props) {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8080/admin/comment")
+      .get("../admin/comment")
       .then((response) => {
         setData(response.data);
       })
@@ -46,9 +46,7 @@ function CommentList(props) {
 
     const fetchData = async () => {
       try {
-        const response = await axios.get(
-          `http://localhost:8080/admin/board/${selectedNo}`
-        );
+        const response = await axios.get(`../admin/board/${selectedNo}`);
         setBoardData(response.data);
         // feedModalData.current = response.data;
         if (response.data) {
@@ -73,7 +71,7 @@ function CommentList(props) {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8080/admin/user")
+      .get("../admin/user")
       .then((response) => {
         setUser(response.data);
         feedModalUser.current = response.data;

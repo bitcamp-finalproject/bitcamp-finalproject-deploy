@@ -23,10 +23,7 @@ const NaverLoginHandler = () => {
       });
 
       try {
-        const response = await axios.post(
-          "http://localhost:8080/auth/naverlogin",
-          params
-        );
+        const response = await axios.post("../auth/naverlogin", params);
 
         // console.log(response);
         // alert(

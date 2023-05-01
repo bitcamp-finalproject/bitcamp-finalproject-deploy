@@ -9,7 +9,7 @@ function Searchs() {
     console.log("검색어: ", searchTerm);
     axios
       .post(
-        "http://localhost:8080/boards/keyword",
+        "../boards/keyword",
         {},
         {
           params: {

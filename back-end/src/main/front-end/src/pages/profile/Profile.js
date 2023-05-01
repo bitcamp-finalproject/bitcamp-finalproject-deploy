@@ -14,7 +14,7 @@ function Profile(props) {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8080/member/" + no)
+      .get("../member/" + no)
       .then((response) => {
         setData(response.data.data);
         setIsLoading(false);
@@ -26,7 +26,7 @@ function Profile(props) {
   }, [no, location.state]);
 
   if (isLoading) {
-    return <div style={{minHeight: "900px"}}>Loading...</div>;
+    return <div style={{ minHeight: "900px" }}>Loading...</div>;
   }
   if (error) {
     return <div>Error: {error.message}</div>;

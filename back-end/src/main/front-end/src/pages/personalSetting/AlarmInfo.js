@@ -13,7 +13,7 @@ function AlarmInfo(props) {
   function moveDirect() {
     setIsRead(true);
 
-    axios.put(`http://localhost:8080/alarm/${log.logNo}`).then((response) => {
+    axios.put(`../alarm/${log.logNo}`).then((response) => {
       if (response.data.status === "failure") {
         navigate("/");
       }

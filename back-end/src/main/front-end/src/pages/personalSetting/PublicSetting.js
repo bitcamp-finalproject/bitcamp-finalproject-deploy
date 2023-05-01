@@ -8,7 +8,7 @@ function PublicSetting(props) {
   const navigate = useNavigate();
   const [data, setData] = useState([]);
   useEffect(() => {
-    axios.get("http://localhost:8080/publicSetting").then((response) => {
+    axios.get("../publicSetting").then((response) => {
       if (response.data.status === "failure") {
         navigate("/");
       }

@@ -21,7 +21,7 @@ function Navbars(props) {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const result = await axios("http://localhost:8080/auth/user");
+        const result = await axios("../auth/user");
         if (result.data.status == "success") {
           props.setCurrentUser(result.data.data);
           feedModalUser.current = { data: result.data.data };

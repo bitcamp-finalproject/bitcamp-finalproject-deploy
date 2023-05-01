@@ -19,9 +19,7 @@ function BoardView(props) {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(
-          `http://localhost:8080/admin/board/` + no
-        );
+        const response = await axios.get(`../admin/board/` + no);
         setData(response.data);
       } catch (error) {
         console.error(error);
@@ -33,9 +31,7 @@ function BoardView(props) {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(
-          `http://localhost:8080/admin/board/tag/` + no
-        );
+        const response = await axios.get(`../admin/board/tag/` + no);
         const tag = response.data[0].tag;
         setData((prevData) => ({
           ...prevData,
@@ -51,9 +47,7 @@ function BoardView(props) {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(
-          `http://localhost:8080/admin/board/report/` + no
-        );
+        const response = await axios.get(`../admin/board/report/` + no);
         setReport(response.data);
       } catch (error) {
         console.error(error);
@@ -65,7 +59,7 @@ function BoardView(props) {
   // 게시물 삭제
   const deleteBoard = (no, replyNos) => {
     axios
-      .delete(`http://localhost:8080/admin/board/delete/${no}`, {
+      .delete(`../admin/board/delete/${no}`, {
         data: replyNos,
       })
       .then((response) => {
@@ -78,7 +72,7 @@ function BoardView(props) {
 
   const handleDeleteClick = () => {
     axios
-      .get(`http://localhost:8080/admin/reply/${no}`)
+      .get(`../admin/reply/${no}`)
       .then((response) => {
         const replyNos = response.data;
         deleteBoard(no, replyNos);

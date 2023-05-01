@@ -10,7 +10,7 @@ function Sortbar() {
   if (currentPath !== "random") {
     axios
       .post(
-        "http://localhost:8080/boards/sort",
+        "../boards/sort",
         {},
         {
           params: {
@@ -30,7 +30,7 @@ function Sortbar() {
   const Click = (param) => {
     axios
       .post(
-        "http://localhost:8080/boards/sort",
+        "../boards/sort",
         {},
         {
           params: {
@@ -55,7 +55,7 @@ function Sortbar() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:8080/boards/auth`)
+      .get(`../boards/auth`)
       .then((response) => setAuth(response.data))
       .catch((error) => console.log(error));
   }, []);

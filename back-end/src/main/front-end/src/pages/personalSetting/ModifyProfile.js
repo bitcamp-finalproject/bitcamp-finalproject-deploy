@@ -48,7 +48,7 @@ function ModifyProfile(props) {
   };
 
   useEffect(() => {
-    axios.get("http://localhost:8080/auth/user").then((response) => {
+    axios.get("../auth/user").then((response) => {
       if (response.data.status === "failure") {
         navigate("/");
       }
@@ -86,15 +86,11 @@ function ModifyProfile(props) {
         "base64"
       );
       try {
-        await axios.put(
-          "http://localhost:8080/member/upload/profileImg",
-          formData,
-          {
-            headers: {
-              "Content-Type": "multipart/form-data;",
-            },
-          }
-        );
+        await axios.put("../member/upload/profileImg", formData, {
+          headers: {
+            "Content-Type": "multipart/form-data;",
+          },
+        });
       } catch (error) {
         console.error(error);
       }
@@ -383,7 +379,7 @@ function ModifyProfile(props) {
                 }).then((result) => {
                   if (result.isConfirmed) {
                     // 확인 버튼을 클릭하면 아래 코드 실행
-                    axios.put("http://localhost:8080/member", {
+                    axios.put("../member", {
                       password: password,
                       gender: gender,
                       birthDate: birthdate,
@@ -486,7 +482,7 @@ function ModifyProfile(props) {
               if (nickCheckState && !isNickDuplication) {
                 axios
                   .put(
-                    "http://localhost:8080/member/nickname",
+                    "../member/nickname",
                     {},
                     {
                       params: {
@@ -504,9 +500,7 @@ function ModifyProfile(props) {
                 return;
               } else {
                 axios
-                  .get(
-                    `http://localhost:8080/member/check/nickname/${nickname}`
-                  )
+                  .get(`../member/check/nickname/${nickname}`)
                   .then((response) => {
                     if (response.data.status === "failure") {
                       setIsNickDuplication(true);

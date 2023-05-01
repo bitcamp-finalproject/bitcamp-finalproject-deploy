@@ -16,7 +16,7 @@ function MemberView(props) {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`http://localhost:8080/admin/` + no);
+        const response = await axios.get(`../admin/` + no);
         setData(response.data.data);
       } catch (error) {
         console.error(error);
@@ -28,9 +28,7 @@ function MemberView(props) {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(
-          `http://localhost:8080/admin/member/` + no
-        );
+        const response = await axios.get(`../admin/member/` + no);
         setPoint(response.data);
       } catch (error) {
         console.error(error);
@@ -46,7 +44,7 @@ function MemberView(props) {
 
     axios
       .put(
-        `http://localhost:8080/admin/member/${no}/accountState`,
+        `../admin/member/${no}/accountState`,
         {
           accountState: e.target.value,
         },
@@ -61,7 +59,7 @@ function MemberView(props) {
       .catch((error) => console.error(error));
   };
 
-  axios.get(`http://localhost:8080/admin/member/${no}/accountState`, {
+  axios.get(`../admin/member/${no}/accountState`, {
     withCredentials: true,
   });
 
