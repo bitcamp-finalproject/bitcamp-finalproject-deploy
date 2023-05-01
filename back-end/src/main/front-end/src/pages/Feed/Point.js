@@ -27,7 +27,7 @@ function Point(props) {
 
     axios
       .post(
-        "http://localhost:8080/point",
+        "../point",
         {},
         {
           params: {
@@ -60,7 +60,7 @@ function Point(props) {
   };
 
   useEffect(() => {
-    axios.get("http://localhost:8080/point/member").then((response) => {
+    axios.get("../point/member").then((response) => {
       setMyPoint(response.data);
     });
   }, [isUpdated]);

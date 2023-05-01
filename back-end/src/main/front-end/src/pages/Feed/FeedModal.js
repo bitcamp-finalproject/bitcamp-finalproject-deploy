@@ -32,7 +32,7 @@ function FeedModal(props) {
     console.log(keyword);
     axios
       .post(
-        "http://localhost:8080/boards/keyword",
+        "../boards/keyword",
         {},
         {
           params: {
@@ -87,7 +87,7 @@ function FeedModal(props) {
     event.preventDefault();
     axios
       .post(
-        "http://localhost:8080/reply",
+        "../reply",
         {},
         {
           params: {
@@ -119,18 +119,18 @@ function FeedModal(props) {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:8080/reply/${boardNo}`)
+      .get(`../reply/${boardNo}`)
       .then((response) => setReply(response.data))
       .catch((error) => console.log(error));
   }, [isUpdated]);
 
-  axios.get("http://localhost:8080/point/board/" + boardNo).then((response) => {
+  axios.get("../point/board/" + boardNo).then((response) => {
     setPoint(response.data);
   });
 
   useEffect(() => {
     axios
-      .get(`http://localhost:8080/boards/tag/${boardNo}`)
+      .get(`../boards/tag/${boardNo}`)
       .then((response) => setTag(response.data))
       .catch((error) => console.log(error));
   }, []);
