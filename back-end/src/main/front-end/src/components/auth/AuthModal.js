@@ -78,7 +78,7 @@ function AuthModal(props) {
   const handleClickProfile = () => {
     handleClose();
 
-    axios.get("http://localhost:8080/auth/user").then((response) => {
+    axios.get("../auth/user").then((response) => {
       navigate("/Profile", {
         state: { no: response.data.data.no },
       });
@@ -103,7 +103,7 @@ function AuthModal(props) {
     handleMouseLeaveLogout();
 
     axios
-      .get("http://localhost:8080/auth/logout")
+      .get("../auth/logout")
       .then((response) => {
         setCurrentUser(null);
         window.location.href = "http://localhost:3000";

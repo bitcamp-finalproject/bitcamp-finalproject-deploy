@@ -50,7 +50,7 @@ function FindPwModal(props) {
     }
 
     axios
-      .get("http://localhost:8080/auth/checkemail", {
+      .get("../auth/checkemail", {
         params: {
           email: email,
         },
@@ -74,7 +74,7 @@ function FindPwModal(props) {
 
     axios
       .put(
-        "http://localhost:8080/auth/findpw",
+        "../auth/findpw",
         {},
         {
           params: {
