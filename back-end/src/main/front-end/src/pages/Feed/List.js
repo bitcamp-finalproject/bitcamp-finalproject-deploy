@@ -16,7 +16,7 @@ function List(props) {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:8080/boards/auth`)
+      .get(`http://../boards/auth`)
       .then((response) => setAuth(response.data))
       .catch((error) => console.log(error));
   }, []);
@@ -45,7 +45,7 @@ function List(props) {
 
   async function loadData() {
     const currentPage = Math.ceil(data.length / 10) + 1;
-    const response = await axios.get("http://localhost:8080/boards", {
+    const response = await axios.get("http://../boards", {
       params: {
         currentPage: currentPage,
       },
